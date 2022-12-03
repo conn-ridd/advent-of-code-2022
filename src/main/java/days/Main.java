@@ -12,5 +12,7 @@ public class Main {
         System.out.println(day2.totalScoreSecondStrat());
 
         Day3 day3 = new Day3();
+        System.out.println(day3.answerPart1());
+        System.out.println(day3.answerPart2());
     }
 }
