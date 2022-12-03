@@ -42,7 +42,6 @@ public class Day3 {
                 }
             }
             commonCharacters.add(badge);
-            System.out.println(commonCharacters);
         }
         return calculateTotal(commonCharacters);
     }
