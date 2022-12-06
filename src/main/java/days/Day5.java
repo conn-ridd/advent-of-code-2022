@@ -40,7 +40,6 @@ public class Day5 {
             String cratesBeingMoved = this.stacks2[numberMoveFrom-1].substring(stacks2[numberMoveFrom-1].length()-amountToMove);
             this.stacks2[numberMoveTo-1] = this.stacks2[numberMoveTo-1] + cratesBeingMoved;
             this.stacks2[numberMoveFrom-1] = this.stacks2[numberMoveFrom-1].substring(0, stacks2[numberMoveFrom-1].length()-amountToMove);
-            System.out.println(Arrays.toString(this.stacks2));
         }
         for (String stack: this.stacks2) {
             answer.append(stack.charAt(stack.length() - 1));

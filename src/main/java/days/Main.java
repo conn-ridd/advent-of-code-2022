@@ -22,5 +22,9 @@ public class Main {
         Day5 day5 = new Day5();
         System.out.println(day5.answerPart1());
         System.out.println(day5.answerPart2());
+
+        Day6 day6 = new Day6();
+        System.out.println(day6.answerPart1());
+        System.out.println(day6.answerPart2());
     }
 }
