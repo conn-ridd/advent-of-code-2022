@@ -1,26 +1,14 @@
 package main.java.days;
 
 import main.java.util.InputReader;
-import org.w3c.dom.ls.LSOutput;
-
-import java.util.Arrays;
 import java.util.List;
 
 public class Day8 {
     private final List<String> inputList = InputReader.getInputAsList(8);
-
     private final int[] highestInRow = new int[inputList.size()];
-
     private final int[] columnOfHighestInRow = new int[inputList.size()];
     private final int[] highestInColumn = new int[inputList.get(0).length()];
-
     private final int[] rowOfHighestInColumn = new int[inputList.get(0).length()];
-
-    public int answerPart1() {
-        findHighest();
-        return checkIfVisible();
-    }
-
     public int checkIfVisible() {
         int counterForRow = 0;
         int visibleTrees = 0;
@@ -38,7 +26,6 @@ public class Day8 {
         }
         return visibleTrees;
     }
-
     public void findHighest() {
         int counterForRow = 0;
         for (String trees: inputList) {
@@ -62,8 +49,6 @@ public class Day8 {
             counterForRow ++;
         }
     }
-
-
     public int betterAnswer() {
         int totalVisible = 0;
         for (int j=0; j<inputList.size(); j++) {
@@ -73,10 +58,8 @@ public class Day8 {
             } else {
                 for (int k=0; k<rowOfTrees.length(); k++) {
                     char tree = rowOfTrees.charAt(k);
-//                    System.out.println(Arrays.toString(rowOfTrees.toCharArray()));
                     if (k == 0 || k == rowOfTrees.length()-1) {
                         totalVisible ++;
-//                        System.out.println("tree of height " + tree + " has been ignored because it's on the edge of the grid");
                     } else {
                         int treeHeight = tree - '0';
                         boolean isVisibleFromLeft = true;
@@ -115,14 +98,12 @@ public class Day8 {
         }
         return totalVisible;
     }
-
     public int betterAnswerPart2() {
         int bestScenicValue = 0;
         for (int j=1; j<inputList.size()-1; j++) {
             String rowOfTrees = inputList.get(j);
             for (int k=1; k<rowOfTrees.length()-1; k++) {
                 char tree = rowOfTrees.charAt(k);
-//              System.out.println(Arrays.toString(rowOfTrees.toCharArray()));
                 int treeHeight = tree - '0';
                 boolean alreadyCheckedRight = false;
                 boolean alreadyCheckedBelow = false;
