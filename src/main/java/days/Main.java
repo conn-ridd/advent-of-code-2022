@@ -51,7 +51,7 @@ public class Main {
 
         Day10 day10 = new Day10();
         System.out.println("Answer to day 10 part one: " + day10.answerPart1());
-        System.out.println("Answer to day 10 part two: " + day10.answerPart2());
+        day10.answerPart2();
         System.out.println("=================");
     }
 }
