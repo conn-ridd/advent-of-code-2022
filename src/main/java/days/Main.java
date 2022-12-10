@@ -53,5 +53,10 @@ public class Main {
         System.out.println("Answer to day 10 part one: " + day10.answerPart1());
         day10.answerPart2();
         System.out.println("=================");
+
+        Day11 day11 = new Day11();
+//        System.out.println("Answer to day 11 part one: " + day11.answerPart1());
+//        System.out.println("Answer to day 11 part two: " + day11.answerPart2());
+        System.out.println("=================");
     }
 }
